@@ -1,0 +1,162 @@
+
+
+html
+{
+    font-size: 62.5%;
+    font-family: "sans-serif";
+}
+
+.main_div{
+
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    
+}
+
+
+.music_container{
+    width: 35rem;
+    height: 55rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem black;
+    padding: 3rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+#title
+{
+    text-transform: uppercase;
+   /* letter-spacing: 0.2rem;*/
+   color: black;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgb(197, 8, 8);
+}
+
+
+#artist
+{
+    color: darkturquoise;
+    text-transform: uppercase;
+   /* letter-spacing: 0.2rem;*/
+   color: black;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    /*text-shadow: 0 0.3rem 0.5rem rgb(197, 8, 8);*/
+}
+
+
+img{
+    width: 70%;
+    height: 70%;
+    border-radius: 50%; /* to make it circle*/
+    object-fit: cover;              /*The image will cover the complete width and height of the parent div*/
+    box-shadow: 0rem 0.4rem 2rem 0.01rem black;
+}
+
+.music_control
+{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5rem;
+    align-items: center;
+}
+
+.music_control .fas
+{
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+  /*  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,4));*/
+}
+
+.music_control .fas:hover{
+    color:lightslategray;
+}
+
+.music_control .fa-play:hover{
+    color:black;
+    background-color: aqua;
+    box-shadow: 0 0.2rem 1rem 0.2rem rgb(236, 97, 97)
+}
+.main-button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(93, 16, 180);
+    color: white;
+    /* display flex to bring the item to center*/
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /*center vertically*/
+    font-size: 1.4rem; 
+}
+
+.anime
+{
+    animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer
+{
+    /* it will take 3sec to rotate from 0 to 360*/
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*  Progress Style */
+.progressbar_container
+{
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    margin-top: 1rem;
+
+}
+
+.progress_div
+{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.7),
+    0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(247, 156, 53, 0.07), 
+    0 16px 32px rgba(204, 61, 61, 0.548), 0 32px 64px rgba(0,0,0,0.07);
+
+    border-radius: 4rem;
+    position: relative;     /* this will help the class="progress" to lie over the class="progress div"*/
+    margin-top: 0.8rem;
+    transition: all 1s linear;
+    appearance: none;
+    cursor: pointer;
+}
+/* In this way progress inherit the property of progress_div means it progrss_div and progress become parallel*/
+
+.progress  /* progress meter*/
+{
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: limegreen;
+}
+
+/*Making 2 component of the class far apart*/
+.progress_duration
+{
+    display: flex;
+    justify-content: space-between;
+}
+
